@@ -1,8 +1,11 @@
-# Alpine JQ Image
+# Alpine WGET, Curl, Dep, Golang Image
 
-Simple base image containing alpine and jq
+Simple base image containing alpine, golang and dep
 
 Base on https://hub.docker.com/_/alpine/ , image `alpine:edge`
 
 ## Components included
-* jq
+* wget
+* curl
+* dep
+* golang
