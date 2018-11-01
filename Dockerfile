@@ -1,7 +1,20 @@
-FROM golang:1.9.3-alpine3.7 AS builder
+FROM golang:alpine AS builder
+MAINTAINER Rajesh Jain <rjain15@gmail.com>
+RUN apk update
+RUN apk upgrade
+
 RUN apk add --no-cache curl openssl
 RUN apk add --no-cache wget
 RUN apk add --update --no-cache bash
 RUN apk add --update --no-cache git
 
-RUN curl -fsSL -o /usr/local/bin/dep https://github.com/golang/dep/releases/download/v0.4.1/dep-linux-amd64 && chmod +x /usr/local/bin/dep
+RUN apk add --no-cache \
+	bash \
+	curl \
+	git \
+	openssh \
+  wget
+
+
+ENV INSTALL_DIRECTORY /usr/local/bin
+RUN curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
