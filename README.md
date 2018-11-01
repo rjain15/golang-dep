@@ -1,6 +1,6 @@
 # Alpine WGET, Curl, Dep, Golang Image
 
-Simple base image containing alpine, golang and dep
+Simple base image containing alpine, golang, wget  and dep
 
 Base on https://hub.docker.com/_/alpine/ , image `alpine:edge`
 
